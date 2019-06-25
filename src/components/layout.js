@@ -18,7 +18,11 @@ const FadeinDiv = styled.div`
 `
 
 const Title = styled.h1`
-  color: white
+  color: black
+  width:70%
+  margin:0 auto;
+  background-color:white
+  opacity:0.8
   text-align: center
   font-size: 5rem
 `
