@@ -99,7 +99,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #1e252d;
+		background-color: transparent;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3239,6 +3239,7 @@ input, select, textarea {
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
+			transform:scale(0.5);
 			z-index: -1;
 		}
 
