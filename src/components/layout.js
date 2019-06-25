@@ -1,12 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import styled, { keyframes } from 'styled-components';
-import { fadeIn } from 'react-animations'
-import { Parallax, Background } from 'react-parallax'
-
+import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
+import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations'
+import { Parallax, Background } from 'react-parallax';
+
 
 
 
@@ -14,15 +12,15 @@ import { rhythm, scale } from "../utils/typography"
 const fadeinAnimation = keyframes`${fadeIn}`
 
 const FadeinDiv = styled.div`
-margin-top: 400px
-height: 60vh
-animation: 3s ${fadeinAnimation}
+  margin-top: 400px
+  height: 60vh
+  animation: 3s ${fadeinAnimation}
 `
 
 const Title = styled.h1`
-color: white
-text-align: center
-font-size: 5rem
+  color: white
+  text-align: center
+  font-size: 5rem
 `
 
 class Layout extends React.Component {
@@ -34,20 +32,17 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
         header = (
-		<div>
-                <Parallax
-				blur={10}
-                bgImage="/static/690ba3915e50263828b1f46a569bacbc/8a760/bg.jpg"
-				bgImageStyle={{'width':'95%', 'object-fit':'cover'}}
-				strength={800}
-				>
-                    <FadeinDiv>
-                        <Title> {title} </Title>
-                        <p className="title">{description}</p>
-                    </FadeinDiv>
-
-                </Parallax>
-			</div>
+		        <div>
+              <Parallax
+                bgImage={require('/Users/alexandramickle/gatsby-playground-master/src/styles/images/tyotwr.jpeg')}
+                bgImageAlt="Tokyo Tower"
+                strength={800}>
+                <FadeinDiv>
+                    <Title> {title} </Title>
+                    <p className="title">{description}</p>
+                </FadeinDiv>
+              </Parallax>
+			      </div>
 
 
       )
@@ -91,15 +86,14 @@ export default Layout
 
 export const bgQuery = graphql`
 query BgQuery {
-	bgimg: file(absolutePath: {regex: "/bg.jpg/"}) {
+	bgimg: file(absolutePath: {regex: "/tyotwr.jpeg/"}) {
 		childImageSharp {
 			fixed(width: 1240) {
 			...GatsbyImageSharpFixed
 			}
-				
+
 		}
-		
+
 	}
 }
 `
-
