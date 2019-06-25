@@ -3395,9 +3395,12 @@ input, select, textarea {
 		#intro p, p.title {
 			font-size: 1.25rem;
 			font-style: italic;
-			margin-top: -0.25rem;
 			text-align: center;
-			color: white;
+			color: black;
+			background-color:white;
+			opacity:0.8;
+			width:70%;
+			margin:0 auto;
 		}
 
 		#intro + #header {
